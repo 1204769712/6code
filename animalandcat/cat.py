@@ -1,4 +1,4 @@
-from lx01.animal import Animal
+from animalandcat.animal import Animal
 
 class Cat(Animal):
 
