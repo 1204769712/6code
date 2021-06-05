@@ -1,0 +1,12 @@
+add_member:
+  - locator: //*[@resource-id="com.tencent.wework:id/ays"]
+    action: find_sendkeys
+    value: ${name}
+
+  - locator: //*[@resource-id="com.tencent.wework:id/f4m"]
+    action: find_sendkeys
+    value: ${phonenum}
+
+  - locator: //*[@text='保存']
+    action: find_click
+

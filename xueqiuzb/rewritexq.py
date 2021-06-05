@@ -1,7 +1,9 @@
 import json
+import sys
 
 from mitmproxy import http
 from mitmproxy import ctx
+from mitmproxy.tools._main import mitmdump
 
 
 class Counter:
@@ -18,9 +20,11 @@ class Counter:
         # 修改原始数据
         # 获取的text 是str类型，如果要对数据进行操作，需要进行数据转换
             data = json.loads(flow.response.text)
-            data["data"]["items"][0]["quote"]["name"] = "hogwarts"
-            data["data"]["items"][1]["quote"]["name"] = "hogwarts"
-            data["data"]["items"][2]["quote"]["name"] = "hogwarts"
+            data1 = data["data"]["items"][0]["quote"]["name"]
+            data["data"]["items"][0]["quote"]["name"] = data1
+            data2 = data["data"]["items"][0]["quote"]["name"]
+            data["data"]["items"][1]["quote"]["name"] = data2 * 2
+            data["data"]["items"][2]["quote"]["name"] = ""
             flow.response.text = json.dumps(data)
         # 赋值给响应信息
 
@@ -28,3 +32,8 @@ class Counter:
 addons = [
     Counter()
 ]
+
+
+
+
+
