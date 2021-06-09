@@ -1,0 +1,8 @@
+delete_member_click:
+  - text: 删除成员
+    action: swip_click
+
+determine_click:
+  - locator: //*[@text='确定']
+    action: find_click
+    by: xpath

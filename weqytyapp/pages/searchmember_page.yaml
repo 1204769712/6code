@@ -1,0 +1,10 @@
+search_member_sendkeys:
+  - locator: //*[@text='搜索']
+    action: find_sendkeys
+    by: xpath
+    value: ${name}
+
+search_member_click:
+  - locator: //*[@text='电子商务买卖']
+    action: find_click
+    by: xpath

@@ -1,0 +1,6 @@
+top_right_click:
+  - locator: //*[@resource-id="com.tencent.wework:id/h8u"]
+    action: find_click
+    by: xpath
+
+

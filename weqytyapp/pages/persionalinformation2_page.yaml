@@ -1,0 +1,4 @@
+edit_member_click:
+  - locator: //*[@text='编辑成员']
+    action: find_click
+    by: xpath

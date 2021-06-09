@@ -1,0 +1,8 @@
+click_addcontact:
+  - text: 添加成员
+    action: swip_click
+
+search_click:
+  - locator: //*[@resource-id="com.tencent.wework:id/h8u"]/android.widget.RelativeLayout[1]
+    action: find_click
+    by: xpath
